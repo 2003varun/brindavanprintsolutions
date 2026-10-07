@@ -1,0 +1,11 @@
+1. Home
+2. Contact Us
+3. Products
+	a)Screen Printing
+	b)TExtile Printing
+	c)Ceramic Printing
+	d)Graphic Printing
+	e)Mini printing
+	
+4. About Us(Company profile)
+5. Our Partners

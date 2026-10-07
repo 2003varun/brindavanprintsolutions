@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brindavan Print Solutions - Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="brindavan_logo.png">
+
+    <style>
+        /* =========================================================
+           CONTACT PAGE - MODERN GLOSSY DESIGN
+           ========================================================= */
+
+        .contact-page {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.10), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.08), transparent 30%),
+                linear-gradient(135deg, #f7faff 0%, #eef4fb 50%, #f9fbff 100%);
+            padding: 90px 0 100px;
+        }
+
+        .contact-page::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.07);
+            filter: blur(10px);
+            top: -180px;
+            left: -140px;
+            pointer-events: none;
+        }
+
+        .contact-page::after {
+            content: "";
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: rgba(96, 165, 250, 0.06);
+            filter: blur(10px);
+            bottom: -180px;
+            right: -120px;
+            pointer-events: none;
+        }
+
+        .contact-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Intro */
+
+        .contact-intro {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 60px;
+        }
+
+        .contact-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 25px rgba(31, 56, 88, 0.07);
+            color: #2454a6;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .contact-eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2563eb;
+            box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.10);
+        }
+
+        .contact-intro h1 {
+            margin: 0;
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -1.8px;
+            font-weight: 800;
+            color: #12233d;
+            margin-top: -50px;
+        }
+
+        .contact-intro h1 span {
+            background: linear-gradient(135deg, #163d7a, #3277d8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contact-intro p {
+            margin: 18px auto 0;
+            max-width: 650px;
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        /* Main Cards */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 26px;
+            align-items: stretch;
+        }
+
+        .contact-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow:
+                0 25px 70px rgba(27, 52, 84, 0.10),
+                0 5px 18px rgba(27, 52, 84, 0.05);
+        }
+
+        .contact-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Information Card */
+
+        .contact-info-card {
+            padding: 38px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.93),
+                    rgba(242, 247, 253, 0.88)
+                );
+        }
+
+        .contact-info-card::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.06);
+            top: -110px;
+            right: -90px;
+            pointer-events: none;
+        }
+
+        .card-heading {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .card-heading .small-label {
+            display: block;
+            margin-bottom: 9px;
+            color: #3974c5;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .card-heading h2 {
+            margin: 0;
+            color: #152844;
+            font-size: 25px;
+            line-height: 1.25;
+            font-weight: 800;
+        }
+
+        .company-description {
+            position: relative;
+            z-index: 2;
+            margin: 12px 0 30px;
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .info-list {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.68);
+            border: 1px solid rgba(219, 228, 240, 0.7);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(96, 165, 250, 0.35);
+            box-shadow: 0 10px 25px rgba(31, 56, 88, 0.07);
+        }
+
+        .info-icon {
+            flex: 0 0 38px;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 11px;
+            background: linear-gradient(145deg, #edf5ff, #e2edff);
+            color: #2864b9;
+            font-size: 16px;
+            font-weight: 800;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .info-content strong {
+            display: block;
+            margin-bottom: 3px;
+            color: #233650;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .info-content span,
+        .info-content a {
+            color: #66758a;
+            font-size: 13px;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+
+        .info-content a:hover {
+            color: #2563eb;
+        }
+
+        /* Form Card */
+
+        .contact-form-card {
+            padding: 38px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.97),
+                    rgba(248, 251, 255, 0.92)
+                );
+        }
+
+        .form-heading {
+            margin-bottom: 27px;
+        }
+
+        .form-heading .small-label {
+            display: block;
+            margin-bottom: 9px;
+            color: #3974c5;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .form-heading h2 {
+            margin: 0;
+            color: #152844;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .form-heading p {
+            margin: 8px 0 0;
+            color: #7a8798;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .modern-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group label {
+            color: #34445b;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid #dce5f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.82);
+            color: #1d2b3f;
+            font-family: inherit;
+            font-size: 15px;
+            box-shadow:
+                inset 0 1px 2px rgba(30, 55, 85, 0.025),
+                0 2px 8px rgba(30, 55, 85, 0.025);
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .form-group input {
+            height: 52px;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #a1adbc;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #6b9de0;
+            background: #fff;
+            box-shadow:
+                0 0 0 4px rgba(59, 130, 246, 0.08),
+                0 8px 20px rgba(31, 56, 88, 0.05);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 11px;
+            margin-top: 3px;
+        }
+
+        .button_design {
+            box-sizing: border-box;
+            width: auto !important;
+            min-width: 125px;
+            border: 0 !important;
+            border-radius: 11px !important;
+            padding: 14px 24px !important;
+            font-family: inherit !important;
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            cursor: pointer;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        #but_submit {
+            background: linear-gradient(135deg, #1e4f98, #3276d1) !important;
+            color: #fff !important;
+            box-shadow: 0 9px 20px rgba(37, 99, 235, 0.20);
+        }
+
+        #but_submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 13px 26px rgba(37, 99, 235, 0.28);
+        }
+
+        .button_clear {
+            background: #eef3f9 !important;
+            color: #52647b !important;
+        }
+
+        .button_clear:hover {
+            transform: translateY(-2px);
+            background: #e4ebf4 !important;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+            .contact-page {
+                padding: 70px 0 80px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info-card,
+            .contact-form-card {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-page {
+                padding: 55px 0 65px;
+            }
+
+            .contact-wrapper {
+                padding: 0 16px;
+            }
+
+            .contact-intro {
+                margin-bottom: 32px;
+            }
+
+            .contact-intro h1 {
+                font-size: 38px;
+            }
+
+            .contact-intro p {
+                font-size: 14px;
+            }
+
+            .contact-info-card,
+            .contact-form-card {
+                padding: 23px;
+                border-radius: 19px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .button_design {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="home-page sub-page">
+
+<header class="modern-header">
+    <div class="header-container">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="brindavan_logo.png" alt="Brindavan Logo" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-title">Brindavan</span>
+                    <span class="logo-subtitle">Print Solutions</span>
+                </div>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">Company Profile</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="our_brands.html">Brands</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="header-cta">
+            <a href="contact_us.html" class="btn-primary">Enquire Now</a>
+        </div> -->
+    </div>
+</header>
+
+
+<!-- =========================================================
+     MODERN CONTACT SECTION
+     ========================================================= -->
+
+<section class="contact-page">
+
+    <div class="contact-wrapper">
+
+        <!-- Intro -->
+        <div class="contact-intro">
+
+            <!-- <div class="contact-eyebrow">
+                Get In Touch
+            </div> -->
+
+            <h1>
+                Let's <span>Connect</span>
+            </h1>
+
+            <p>
+                Have a printing requirement or looking for the right
+                materials for your application? Get in touch with the
+                Brindavan Print Solutions team.
+            </p>
+
+        </div>
+
+
+        <!-- Contact Cards -->
+        <div class="contact-grid">
+
+            <!-- =================================================
+                 CONTACT INFORMATION
+                 ================================================= -->
+
+            <div class="contact-card contact-info-card">
+
+                <div class="card-heading">
+                    <span class="small-label">Contact Information</span>
+
+                    <h2>
+                        Brindavan Print Solutions
+                    </h2>
+
+                    <p class="company-description">
+                        Dealers in Screen, Textile, Ceramic &amp; Offset
+                        Printing Materials.
+                    </p>
+                </div>
+
+
+                <div class="info-list">
+
+                    <!-- Address -->
+                    <div class="info-item">
+
+                        <div class="info-icon">⌖</div>
+
+                        <div class="info-content">
+
+                            <strong>Address</strong>
+
+                            <span>
+                                F-60, Rajajinagar Industrial Estate,<br>
+                                Rajajinagar, Bangalore - 560 010.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="info-item">
+
+                        <div class="info-icon">☎</div>
+
+                        <div class="info-content">
+
+                            <strong>Phone</strong>
+
+                            <span>
+                                080-23154110, 23154487
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Fax -->
+                    <div class="info-item">
+
+                        <div class="info-icon">▣</div>
+
+                        <div class="info-content">
+
+                            <strong>Fax</strong>
+
+                            <span>
+                                080-23154623
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="info-item">
+
+                        <div class="info-icon">@</div>
+
+                        <div class="info-content">
+
+                            <strong>Email</strong>
+
+                            <a href="mailto:prabhu@brindavanprintsolutions.com">
+                                prabhu@brindavanprintsolutions.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Website -->
+                    <div class="info-item">
+
+                        <div class="info-icon">↗</div>
+
+                        <div class="info-content">
+
+                            <strong>Website</strong>
+
+                            <a href="http://www.brindavanprintsolutions.com">
+                                www.brindavanprintsolutions.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTACT FORM
+                 ================================================= -->
+
+            <div class="contact-card contact-form-card">
+
+                <div class="form-heading">
+
+                    <span class="small-label">Send An Enquiry</span>
+
+                    <h2>
+                        Contact Form
+                    </h2>
+
+                    <p>
+                        Fill in your details below and our team will
+                        get back to you.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="modern-form"
+                    id="form1"
+                    method="post"
+                    action="thank_you.html"
+                    onsubmit="return form_validation(this)"
+                >
+
+                    <!-- Name + Phone -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                name="name"
+                                type="text"
+                                id="name"
+                                placeholder="Enter your name"
+                                onkeypress="return noNumbers(event)"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Contact No
+                            </label>
+
+                            <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                placeholder="Enter contact number"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Id
+                        </label>
+
+                        <input
+                            type="text"
+                            name="email"
+                            id="email"
+                            placeholder="Enter your email address"
+                        >
+
+                    </div>
+
+
+                    <!-- Address -->
+                    <div class="form-group">
+
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <textarea
+                            name="address"
+                            id="address"
+                            rows="3"
+                            placeholder="Enter your address"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Comments -->
+                    <div class="form-group">
+
+                        <label for="comments">
+                            Comments
+                        </label>
+
+                        <textarea
+                            name="comments"
+                            id="comments"
+                            rows="5"
+                            placeholder="Tell us about your requirement..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+
+                        <input
+                            name="but_submit"
+                            type="submit"
+                            class="button_design"
+                            id="but_submit"
+                            value="Submit"
+                        >
+
+                        <input
+                            name="but_clear"
+                            type="button"
+                            class="button_design button_clear"
+                            id="but_clear"
+                            value="Reset"
+                            onclick="betterMo(this.form)"
+                        >
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXISTING FOOTER - KEPT UNCHANGED
+     ========================================================= -->
+
+<footer class="modern-footer">
+    <div class="container footer-grid">
+
+        <div class="footer-about">
+            <h3>Brindavan Print Solutions</h3>
+            <p>Future Print Solutions with Technology...</p>
+            <p>Dealers in Screen, Textile, Ceramic & Offset Printing Materials.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">Company Profile</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="our_brands.html">Our Brands</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+                F-60, Rajajinagar Industrial Estate,<br/>
+                Bangalore - 560 010
+            </p>
+            <p>Ph: 080-23154110</p>
+            <p>Email: prabhu@brindavanprintsolutions.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            Copyright © 2010 Brindavan Print Solutions | All Rights Reserved
+        </p>
+    </div>
+</footer>
+<!-- =========================================================
+     EMAILJS INTEGRATION
+     ========================================================= -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    class ContactFormConfig {
+        static ENQUIRY_TO = "contact@q-dat.com";
+        static EMAILJS_SERVICE_ID = "REPLACE_WITH_SERVICE_ID";
+        static EMAILJS_TEMPLATE_ID = "REPLACE_WITH_TEMPLATE_ID";
+        static EMAILJS_PUBLIC_KEY = "REPLACE_WITH_PUBLIC_KEY";
+    }
+
+    (function() {
+        if (ContactFormConfig.EMAILJS_PUBLIC_KEY !== "REPLACE_WITH_PUBLIC_KEY") {
+            emailjs.init(ContactFormConfig.EMAILJS_PUBLIC_KEY);
+        }
+    })();
+
+    if (typeof window.required_field_validation === 'undefined') {
+        window.required_field_validation = function(field, alertmsg) {
+            if (field == null || field.value == null || field.value.trim() === "") {
+                alert(alertmsg);
+                if (field.focus) field.focus();
+                return false;
+            }
+            return true;
+        };
+    }
+
+    if (typeof window.email_validation === 'undefined') {
+        window.email_validation = function(field, alertmsg) {
+            if (!field || !field.value) return false;
+            var apos = field.value.indexOf("@");
+            var dotpos = field.value.lastIndexOf(".");
+            if (apos < 1 || dotpos - apos < 2) {
+                alert(alertmsg);
+                if (field.focus) field.focus();
+                return false;
+            }
+            return true;
+        };
+    }
+
+    if (typeof window.noNumbers === 'undefined') {
+        window.noNumbers = function(e) {
+            var keynum;
+            if(window.event) { // IE
+                keynum = e.keyCode;
+            } else if(e.which) { // Netscape/Firefox/Opera
+                keynum = e.which;
+            }
+            if(keynum >= 48 && keynum <= 57) return false;
+            return true;
+        };
+    }
+
+    if (typeof window.betterMo === 'undefined') {
+        window.betterMo = function(form) {
+            if (form) form.reset();
+        };
+    }
+
+    window.form_validation = function(thisform) {
+        // Validate fields
+        if (
+            window.required_field_validation(thisform.name, "Enter Your Name") === false ||
+            window.required_field_validation(thisform.phone, "Enter Your Contact No") === false ||
+            window.required_field_validation(thisform.email, "Enter Your Email Id") === false ||
+            window.email_validation(thisform.email, "Enter Proper Email Id") === false ||
+            window.required_field_validation(thisform.address, "Enter Your Address") === false ||
+            window.required_field_validation(thisform.comments, "Enter Your Comments") === false
+        ) {
+            return false;
+        }
+
+        if (ContactFormConfig.EMAILJS_SERVICE_ID === "REPLACE_WITH_SERVICE_ID") {
+            alert("EmailJS is not fully configured. Please provide SERVICE_ID, TEMPLATE_ID, and PUBLIC_KEY in the source code.");
+            return false; 
+        }
+
+        var submitBtn = document.getElementById('but_submit');
+        var originalBtnText = submitBtn.value;
+        submitBtn.value = 'Sending...';
+        submitBtn.disabled = true;
+
+        var templateParams = {
+            from_name: thisform.name.value,
+            company: thisform.company ? thisform.company.value : '',
+            email: thisform.email.value,
+            phone: thisform.phone.value,
+            country: thisform.country ? thisform.country.value : '',
+            service: thisform.service ? thisform.service.value : '',
+            message: thisform.comments.value + (thisform.address.value ? "\\n\\nAddress:\\n" + thisform.address.value : ""),
+            to_email: ContactFormConfig.ENQUIRY_TO
+        };
+
+        // Add any additional form fields to templateParams dynamically
+        var formData = new FormData(thisform);
+        formData.forEach((value, key) => {
+            if (!(key in templateParams)) {
+                templateParams[key] = value;
+            }
+        });
+
+        emailjs.send(ContactFormConfig.EMAILJS_SERVICE_ID, ContactFormConfig.EMAILJS_TEMPLATE_ID, templateParams)
+            .then(function() {
+                submitBtn.value = originalBtnText;
+                submitBtn.disabled = false;
+                alert('Your enquiry has been successfully submitted. We will get back to you shortly.');
+                thisform.reset();
+            }, function(error) {
+                submitBtn.value = originalBtnText;
+                submitBtn.disabled = false;
+                alert('Failed to send the enquiry. Please try again later.');
+                console.error("EmailJS Error:", error);
+            });
+
+        // Always return false to prevent standard HTML form submission and page reload
+        return false;
+    };
+</script>
+</body>
+</html>
+
+
+

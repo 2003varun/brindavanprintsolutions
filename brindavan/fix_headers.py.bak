@@ -1,0 +1,41 @@
+import os
+import re
+
+html_files = [f for f in os.listdir('.') if f.endswith('.html')]
+
+# We want to replace everything from <div id="header"> to <!-- end #menu --> with a clean menu
+header_replacement = """      <div id="header">
+        <div id="menu">
+          <ul>
+            <li><a href="index.html"> Home</a> </li>
+            <li><a href="about_us.html">Company Profile</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="our_brands.html">Our Brands</a></li>
+            <li><a href="contact_us.php">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- end #menu -->"""
+
+for f in html_files:
+    with open(f, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Remove Spry scripts/css
+    content = re.sub(r'<script src="SpryAssets/SpryMenuBar\.js" type="text/javascript"></script>\s*', '', content)
+    content = re.sub(r'<link href="SpryAssets/SpryMenuBarHorizontal\.css" rel="stylesheet" type="text/css" />\s*', '', content)
+    content = re.sub(r'<script src="Scripts/AC_RunActiveContent\.js" type="text/javascript"></script>\s*', '', content)
+    
+    # Remove Spry initialization block at the bottom
+    content = re.sub(r'<script type="text/javascript">\s*<!--\s*var MenuBar1 = new Spry\.Widget\.MenuBar.*?\s*//-->\s*</script>\s*', '', content, flags=re.DOTALL)
+    
+    # Replace header table mess with clean div#menu
+    content = re.sub(r'<div id="header">.*?<!-- end #menu -->', header_replacement, content, flags=re.DOTALL)
+
+    # In index.html, remove the AC_FL_RunContent script and just keep the <object> tag
+    content = re.sub(r'<script type="text/javascript">\s*AC_FL_RunContent.*?;\s*//end AC code\s*</script><noscript>', '', content, flags=re.DOTALL)
+    content = content.replace('</noscript>', '')
+
+    with open(f, 'w', encoding='utf-8') as file:
+        file.write(content)
+    
+    print(f"Fixed {f}")
